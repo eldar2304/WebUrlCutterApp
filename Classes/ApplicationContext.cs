@@ -1,11 +1,11 @@
 ﻿namespace WebUrlCutterApp.Classes
 {
 
-    public class ApplicationContext
+    public class ApplicationContext //можно было унаследовать от DbContext EntityFramework, но в ТЗ задачи с БД не стояло
     {
         public List<Link> Links { get; set; }
 
-        public ApplicationContext() 
+        public ApplicationContext()// в случае с DbContext - тут бы создавалась БД если не была создана раньше 
         {
             Links = new List<Link>();
         }
